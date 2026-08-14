@@ -22,25 +22,28 @@
 
 - **[Homework 5](Part_2/Homework_5/Homework_5.ipynb)** - трёхклассовая классификация изображений животных на датасете **[Animal Faces](https://www.kaggle.com/datasets/andrewmvd/animal-faces)** с использованием `PyTorch` и transfer learning: предобработка и нормализация изображений, обучение предобученных CNN-архитектур `ResNet50`, `MobileNetV3-Large` и `ResNeXt50-32x4d`, подбор архитектуры, оптимизатора и learning rate с помощью `Optuna`; лучший результат - **ResNeXt50-32x4d, validation accuracy ≈ 99.8%**.
 - **[Homework 6](Part_2/Homework_6.ipynb)** - классификация эмоций по изображениям лиц на датасете **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)** с использованием `PyTorch` и transfer learning: эксперименты с предобученными `ResNet50/152`, `ResNeXt50`, `MobileNetV3` и `DenseNet201`, подбор архитектуры и гиперпараметров с помощью `Optuna`; лучшая модель - `ResNeXt50_32x4d` с **validation accuracy ≈ 0.699**. Дополнительно выполнены динамическая INT8-квантизация модели, экспорт в `ONNX` и проверка inference через `ONNX Runtime`.
-- **[Homework 7](Part_2/Homework_7.ipynb)** — практическая работа по глубокому обучению.
+- **[Homework 7](Part_2/Homework_7.ipynb)** - NLP-регрессия: прогноз пользовательского рейтинга по тексту отзыва на датасете **KUC Hackathon Winter 2018 (Drug Review Dataset)** с fine-tuning предобученной Transformer-модели `DistilBERT` (`distilbert-base-uncased`) в `Hugging Face Transformers` / `PyTorch`; токенизация через `DistilBertTokenizerFast`, обучение через `Trainer` с FP16 и выбором лучшей модели по MSE. Итоговая оценка: **MSE ≈ 1.346, MAE ≈ 0.555, R² ≈ 0.875**.
 
 ## Итоговый проект
 
-Мой итоговый проект в рамках завершения программы переподготовки ["Data Scientist"](https://fpmidpo.mipt.ru/programs/ppp/datascience)
+Мой итоговый проект в рамках завершения программы профессиональной переподготовки ["Data Scientist"](https://fpmidpo.mipt.ru/programs/ppp/datascience).
 
 ### Автоматическое создание и перевод субтитров для видео
 
 **[Открыть итоговую работу](FINAL_WORK/FINAL_WORK.ipynb)**
 
-Итоговая работа объединяет несколько этапов обработки мультимедиа в единый pipeline:
+Разработан pipeline автоматического создания русских субтитров для англоязычных YouTube-видео:
 
-1. загрузка видео и извлечение аудиодорожки;
-2. автоматическое распознавание речи с помощью **Whisper**;
-3. оценка качества распознавания метрикой **WER (Word Error Rate)**;
-4. машинный перевод субтитров на русский язык с использованием моделей **Transformers / Helsinki-NLP**;
-5. формирование субтитров и сборка итогового видео.
+1. загрузка видео и доступных оригинальных английских субтитров с YouTube;
+2. извлечение и подготовка аудиодорожки для распознавания речи;
+3. автоматическая транскрибация аудио с помощью **OpenAI Whisper (`medium.en`)**;
+4. оценка качества распознавания относительно исходных субтитров с использованием метрики **WER (Word Error Rate)**;
+5. машинный перевод распознанного текста с английского на русский язык с помощью **Hugging Face Transformers** и модели **`Helsinki-NLP/opus-mt-en-ru`**;
+6. преобразование результатов распознавания и перевода в структурированные субтитры и сохранение русской версии в формате **SRT**.
 
-В проекте используются Whisper, Transformers, `jiwer`, FFmpeg и `yt-dlp`.
+Проект демонстрирует построение end-to-end pipeline обработки мультимедийных данных, объединяющего загрузку и обработку видео, **Automatic Speech Recognition (ASR)**, оценку качества распознавания и **Neural Machine Translation (NMT)**.
+
+**Стек:** Python, OpenAI Whisper, Hugging Face Transformers, Helsinki-NLP, PyTorch, `pytube`, MoviePy, FFmpeg, `evaluate` / `jiwer`, pandas.
 
 ## Основные технологии
 
