@@ -13,10 +13,10 @@
 
 ### Модуль 1 — Базовые алгоритмы машинного обучения
 
-- **[Homework 1](Part_1/Homework_1.ipynb)** — исследовательский анализ данных и работа с `pandas` на датасете Olist: продажи, способы оплаты, логистика доставки, стоимость доставки и сезонность; дополнительные задачи на обработку табличных данных.
-- **[Homework 2](Part_1/Homework_2.ipynb)** — практическая работа по модулю классического машинного обучения.
-- **[Homework 3](Part_1/Homework_3.ipynb)** — NLP-классификация твитов: предобработка текста, TF-IDF и классические алгоритмы классификации, включая Naive Bayes, для выявления токсичных и дискриминационных высказываний.
-- **[Homework 4](Part_1/Homework_4.ipynb)** — практическая работа по модулю классического машинного обучения.
+- **[Homework 1](Part_1/Homework_1.ipynb)** - классификация риска заболевания сердца на датасете **[Heart Attack Analysis & Prediction Dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)**: EDA, предобработка и кодирование признаков, подбор гиперпараметров и сравнение моделей `Logistic Regression`, `SVC`, `Random Forest` и `KNN`; лучший результат - **SVC, F1-score ≈ 0.904**.
+- **[Homework 2](Part_1/Homework_2.ipynb)** - детекция мошеннических транзакций на сильно несбалансированном датасете **[Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)**: EDA и предобработка данных, подбор гиперпараметров `Logistic Regression` с помощью `GridSearchCV`, исследование class weighting, методов under-sampling и over-sampling (`RandomUnderSampler`, `TomekLinks`, `NeighbourhoodCleaningRule`, `RandomOverSampler`, `SMOTE`, `ADASYN`) и сравнение с `BalancedRandomForestClassifier`; в итоговом сравнении лучшим подходом с учётом дисбаланса выбран **Balanced Random Forest**.
+- **[Homework 3](Part_1/Homework_3.ipynb)** - NLP-классификация твитов на датасете **[Twitter Sentiment Analysis](https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech)** от Analytics Vidhya для выявления расистских и сексистских высказываний: очистка и лемматизация текста, анализ дисбаланса классов, `CountVectorizer` и `TF-IDF` с N-граммами, сравнение методов over-/under-sampling и подбор гиперпараметров `Multinomial Naive Bayes` через `GridSearchCV`; **macro F1-score ≈ 0.81**. Дополнительно исследованы Transformer-эмбеддинги на базе `sberbank-ai/sbert_large_nlu_ru`.
+- **[Homework 4](Part_1/Homework_4.ipynb)** - прогнозирование оттока держателей кредитных карт на датасете **[Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)**: EDA и анализ дисбаланса классов, отбор информативных признаков с помощью `mutual_info_classif`, обучение `CatBoostClassifier` с нативной обработкой категориальных признаков и подбором гиперпараметров через 5-fold grid search; **accuracy ≈ 0.98, macro F1-score ≈ 0.96, F1-score класса оттока ≈ 0.93**.
 
 ### Модуль 2 — Глубокое обучение
 
