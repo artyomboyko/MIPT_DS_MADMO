@@ -20,8 +20,8 @@
 
 ### Модуль 2 — Глубокое обучение
 
-- **[Homework 5](Part_2/Homework_5/Homework_5.ipynb)** — практическая работа по построению и обучению нейронных сетей.
-- **[Homework 6](Part_2/Homework_6.ipynb)** — Computer Vision на PyTorch: transfer learning, работа с архитектурами ResNet, ResNeXt, MobileNet и DenseNet, подбор гиперпараметров с Optuna, квантизация и экспорт/инференс через ONNX.
+- **[Homework 5](Part_2/Homework_5/Homework_5.ipynb)** - трёхклассовая классификация изображений животных на датасете **[Animal Faces](https://www.kaggle.com/datasets/andrewmvd/animal-faces)** с использованием `PyTorch` и transfer learning: предобработка и нормализация изображений, обучение предобученных CNN-архитектур `ResNet50`, `MobileNetV3-Large` и `ResNeXt50-32x4d`, подбор архитектуры, оптимизатора и learning rate с помощью `Optuna`; лучший результат - **ResNeXt50-32x4d, validation accuracy ≈ 99.8%**.
+- **[Homework 6](Part_2/Homework_6.ipynb)** - классификация эмоций по изображениям лиц на датасете **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)** с использованием `PyTorch` и transfer learning: эксперименты с предобученными `ResNet50/152`, `ResNeXt50`, `MobileNetV3` и `DenseNet201`, подбор архитектуры и гиперпараметров с помощью `Optuna`; лучшая модель - `ResNeXt50_32x4d` с **validation accuracy ≈ 0.699**. Дополнительно выполнены динамическая INT8-квантизация модели, экспорт в `ONNX` и проверка inference через `ONNX Runtime`.
 - **[Homework 7](Part_2/Homework_7.ipynb)** — практическая работа по глубокому обучению.
 
 ## Итоговый проект
