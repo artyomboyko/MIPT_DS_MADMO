@@ -1,4 +1,35 @@
-# MIPT_DS_MADMO
+# MIPT Data Scientist — Final Course & Capstone
+
+<p align="center">
+  <strong>Final course and capstone of MIPT's 3-course Data Scientist professional retraining program.</strong>
+</p>
+
+<p align="center">
+  <a href="https://fpmidpo.mipt.ru/programs/ppp/datascience">
+    <img src="https://img.shields.io/badge/MIPT-Data%20Scientist-003B71" alt="MIPT Data Scientist">
+  </a>
+  <img src="https://img.shields.io/badge/Program-3%20courses-6F42C1" alt="3-course program">
+  <img src="https://img.shields.io/badge/Total-391%20academic%20hours-2DA44E" alt="391 academic hours">
+  <img src="https://img.shields.io/badge/Repository-Final%20course%20%2B%20capstone-0969DA" alt="Final course and capstone">
+</p>
+
+This repository contains my work from the **third and final course** of the [MIPT Data Scientist professional retraining program](https://fpmidpo.mipt.ru/programs/ppp/datascience), together with the **final qualification project** that completed the program.
+
+The full professional retraining program comprised **391 academic hours**:
+
+| Program component | Hours |
+|---|---:|
+| Python and Machine Learning Tools | 100 |
+| Mathematics for Data Analysis | 128 |
+| Data Analysis and Machine Learning Methods | 128 |
+| Final qualification project | 35 |
+| **Total** | **391** |
+
+This repository represents the final course — [**«Методы анализа данных и машинного обучения» МФТИ**](https://fpmidpo.mipt.ru/programs/ppk/ml-course) — plus the capstone project. The work covers classical machine learning, deep learning, NLP, computer vision, ASR, model optimization, and an end-to-end Transformer-based multimedia pipeline.
+
+---
+
+## О репозитории
 
 Учебный репозиторий с выполненными практическими работами и итоговым проектом по курсу [**«Методы анализа данных и машинного обучения» МФТИ**](https://fpmidpo.mipt.ru/programs/ppk/ml-course).
 
@@ -13,20 +44,20 @@
 
 ### Модуль 1 — Базовые алгоритмы машинного обучения
 
-- **[Homework 1](Part_1/Homework_1.ipynb)** - классификация риска заболевания сердца на датасете **[Heart Attack Analysis & Prediction Dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)**: EDA, предобработка и кодирование признаков, подбор гиперпараметров и сравнение моделей `Logistic Regression`, `SVC`, `Random Forest` и `KNN`; лучший результат - **SVC, F1-score ≈ 0.904**.
-- **[Homework 2](Part_1/Homework_2.ipynb)** - детекция мошеннических транзакций на сильно несбалансированном датасете **[Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)**: EDA и предобработка данных, подбор гиперпараметров `Logistic Regression` с помощью `GridSearchCV`, исследование class weighting, методов under-sampling и over-sampling (`RandomUnderSampler`, `TomekLinks`, `NeighbourhoodCleaningRule`, `RandomOverSampler`, `SMOTE`, `ADASYN`) и сравнение с `BalancedRandomForestClassifier`; в итоговом сравнении лучшим подходом с учётом дисбаланса выбран **Balanced Random Forest**.
-- **[Homework 3](Part_1/Homework_3.ipynb)** - NLP-классификация твитов на датасете **[Twitter Sentiment Analysis](https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech)** от Analytics Vidhya для выявления расистских и сексистских высказываний: очистка и лемматизация текста, анализ дисбаланса классов, `CountVectorizer` и `TF-IDF` с N-граммами, сравнение методов over-/under-sampling и подбор гиперпараметров `Multinomial Naive Bayes` через `GridSearchCV`; **macro F1-score ≈ 0.81**. Дополнительно исследованы Transformer-эмбеддинги на базе `sberbank-ai/sbert_large_nlu_ru`.
-- **[Homework 4](Part_1/Homework_4.ipynb)** - прогнозирование оттока держателей кредитных карт на датасете **[Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)**: EDA и анализ дисбаланса классов, отбор информативных признаков с помощью `mutual_info_classif`, обучение `CatBoostClassifier` с нативной обработкой категориальных признаков и подбором гиперпараметров через 5-fold grid search; **accuracy ≈ 0.98, macro F1-score ≈ 0.96, F1-score класса оттока ≈ 0.93**.
+- **[Homework 1](Part_1/Homework_1.ipynb)** — классификация риска заболевания сердца на датасете **[Heart Attack Analysis & Prediction Dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)**: EDA, предобработка и кодирование признаков, подбор гиперпараметров и сравнение моделей `Logistic Regression`, `SVC`, `Random Forest` и `KNN`; лучший результат — **SVC, F1-score ≈ 0.904**.
+- **[Homework 2](Part_1/Homework_2.ipynb)** — детекция мошеннических транзакций на сильно несбалансированном датасете **[Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)**: EDA и предобработка данных, подбор гиперпараметров `Logistic Regression` с помощью `GridSearchCV`, исследование class weighting, методов under-sampling и over-sampling (`RandomUnderSampler`, `TomekLinks`, `NeighbourhoodCleaningRule`, `RandomOverSampler`, `SMOTE`, `ADASYN`) и сравнение с `BalancedRandomForestClassifier`; в итоговом сравнении лучшим подходом с учётом дисбаланса выбран **Balanced Random Forest**.
+- **[Homework 3](Part_1/Homework_3.ipynb)** — NLP-классификация твитов на датасете **[Twitter Sentiment Analysis](https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech)** от Analytics Vidhya для выявления расистских и сексистских высказываний: очистка и лемматизация текста, анализ дисбаланса классов, `CountVectorizer` и `TF-IDF` с N-граммами, сравнение методов over-/under-sampling и подбор гиперпараметров `Multinomial Naive Bayes` через `GridSearchCV`; **macro F1-score ≈ 0.81**. Дополнительно исследованы Transformer-эмбеддинги на базе `sberbank-ai/sbert_large_nlu_ru`.
+- **[Homework 4](Part_1/Homework_4.ipynb)** — прогнозирование оттока держателей кредитных карт на датасете **[Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)**: EDA и анализ дисбаланса классов, отбор информативных признаков с помощью `mutual_info_classif`, обучение `CatBoostClassifier` с нативной обработкой категориальных признаков и подбором гиперпараметров через 5-fold grid search; **accuracy ≈ 0.98, macro F1-score ≈ 0.96, F1-score класса оттока ≈ 0.93**.
 
 ### Модуль 2 — Глубокое обучение
 
-- **[Homework 5](Part_2/Homework_5/Homework_5.ipynb)** - трёхклассовая классификация изображений животных на датасете **[Animal Faces](https://www.kaggle.com/datasets/andrewmvd/animal-faces)** с использованием `PyTorch` и transfer learning: предобработка и нормализация изображений, обучение предобученных CNN-архитектур `ResNet50`, `MobileNetV3-Large` и `ResNeXt50-32x4d`, подбор архитектуры, оптимизатора и learning rate с помощью `Optuna`; лучший результат - **ResNeXt50-32x4d, validation accuracy ≈ 99.8%**.
-- **[Homework 6](Part_2/Homework_6.ipynb)** - классификация эмоций по изображениям лиц на датасете **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)** с использованием `PyTorch` и transfer learning: эксперименты с предобученными `ResNet50/152`, `ResNeXt50`, `MobileNetV3` и `DenseNet201`, подбор архитектуры и гиперпараметров с помощью `Optuna`; лучшая модель - `ResNeXt50_32x4d` с **validation accuracy ≈ 0.699**. Дополнительно выполнены динамическая INT8-квантизация модели, экспорт в `ONNX` и проверка inference через `ONNX Runtime`.
-- **[Homework 7](Part_2/Homework_7.ipynb)** - NLP-регрессия: прогноз пользовательского рейтинга по тексту отзыва на датасете **KUC Hackathon Winter 2018 (Drug Review Dataset)** с fine-tuning предобученной Transformer-модели `DistilBERT` (`distilbert-base-uncased`) в `Hugging Face Transformers` / `PyTorch`; токенизация через `DistilBertTokenizerFast`, обучение через `Trainer` с FP16 и выбором лучшей модели по MSE. Итоговая оценка: **MSE ≈ 1.346, MAE ≈ 0.555, R² ≈ 0.875**.
+- **[Homework 5](Part_2/Homework_5/Homework_5.ipynb)** — трёхклассовая классификация изображений животных на датасете **[Animal Faces](https://www.kaggle.com/datasets/andrewmvd/animal-faces)** с использованием `PyTorch` и transfer learning: предобработка и нормализация изображений, обучение предобученных CNN-архитектур `ResNet50`, `MobileNetV3-Large` и `ResNeXt50-32x4d`, подбор архитектуры, оптимизатора и learning rate с помощью `Optuna`; лучший результат — **ResNeXt50-32x4d, validation accuracy ≈ 99.8%**.
+- **[Homework 6](Part_2/Homework_6.ipynb)** — классификация эмоций по изображениям лиц на датасете **[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)** с использованием `PyTorch` и transfer learning: эксперименты с предобученными `ResNet50/152`, `ResNeXt50`, `MobileNetV3` и `DenseNet201`, подбор архитектуры и гиперпараметров с помощью `Optuna`; лучшая модель — `ResNeXt50_32x4d` с **validation accuracy ≈ 0.699**. Дополнительно выполнены динамическая INT8-квантизация модели, экспорт в `ONNX` и проверка inference через `ONNX Runtime`.
+- **[Homework 7](Part_2/Homework_7.ipynb)** — NLP-регрессия: прогноз пользовательского рейтинга по тексту отзыва на датасете **KUC Hackathon Winter 2018 (Drug Review Dataset)** с fine-tuning предобученной Transformer-модели `DistilBERT` (`distilbert-base-uncased`) в `Hugging Face Transformers` / `PyTorch`; токенизация через `DistilBertTokenizerFast`, обучение через `Trainer` с FP16 и выбором лучшей модели по MSE. Итоговая оценка: **MSE ≈ 1.346, MAE ≈ 0.555, R² ≈ 0.875**.
 
 ## Итоговый проект
 
-Мой итоговый проект в рамках завершения программы профессиональной переподготовки ["Data Scientist"](https://fpmidpo.mipt.ru/programs/ppp/datascience).
+Мой итоговый проект в рамках завершения программы профессиональной переподготовки [**Data Scientist**](https://fpmidpo.mipt.ru/programs/ppp/datascience).
 
 ### Автоматическое создание и перевод субтитров для видео
 
@@ -59,6 +90,6 @@ MIPT_DS_MADMO/
 └── README.md
 ```
 
-## О репозитории
+## Portfolio context
 
-Этот репозиторий служит учебным портфолио по курсу МФТИ и демонстрирует последовательный переход от анализа данных и классических методов машинного обучения к глубокому обучению и сборке прикладного ML-пайплайна из нескольких моделей и инструментов.
+This repository documents the final stage of my MIPT Data Scientist professional retraining path: moving from classical ML into deep learning and finishing with a practical ASR + NMT capstone that combines multiple models and tools into one end-to-end workflow.
